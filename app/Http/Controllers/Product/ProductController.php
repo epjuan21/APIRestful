@@ -30,5 +30,4 @@ class ProductController extends ApiController
     {
         return $this->showOne($product);
     }
-
 }
