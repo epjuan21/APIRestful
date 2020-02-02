@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        Product::update(function($product){
+        Product::updated(function($product){
 
             if ($product->quantity == 0 && $product->estaDisponible()) {
                 $product->status = Product::PRODUCTO_NO_DISPONIBLE;
