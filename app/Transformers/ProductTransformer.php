@@ -36,7 +36,7 @@ class ProductTransformer extends TransformerAbstract
             'identificador' => (int)$product->id,
             'titulo' => (string)$product->name,
             'detalles' => (string)$product->description,
-            'disponibles' => (string)$product->quantity,
+            'disponibles' => (int)$product->quantity,
             'estado' => (string)$product->status,
             'imagen' => url("img/{$product->image}"),
             'vendedor' => (int)$product->seller_id,
