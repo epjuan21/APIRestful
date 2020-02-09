@@ -12,6 +12,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+        Category::flushEventListeners();
         factory(Category::class, 30)->create();
     }
 }

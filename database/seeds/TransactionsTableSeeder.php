@@ -12,6 +12,7 @@ class TransactionsTableSeeder extends Seeder
      */
     public function run()
     {
+        Transaction::flushEventListeners();
         factory(Transaction::class, 1000)->create();
     }
 }

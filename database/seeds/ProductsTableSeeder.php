@@ -13,6 +13,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
+        Product::flushEventListeners();
         factory(Product::class, 1000)->create()->each(
             function($producto) {
                 $categorias = Category::all()->random(mt_rand(1,5))->pluck('id');

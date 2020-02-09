@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        User::flushEventListeners();
         factory(User::class, 1000)->create();
     }
 }
